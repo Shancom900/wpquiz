@@ -15,7 +15,7 @@ import telegram
 load_dotenv()
 
 # Init Firebase
-cred_path = os.getenv("FIREBASE_CREDENTIALS_JSON_PATH")
+cred_path = './firebase-service-account.json'
 cred = credentials.Certificate(cred_path)
 firebase_admin.initialize_app(cred)
 db = firestore.client()
